@@ -10,7 +10,15 @@ class LoginScreen : View() {
         with (root) {
 
             hbox {
-                
+                label("Username")
+                textfield()
+            }
+            hbox {
+                label("Password")
+                passwordfield()
+            }
+            hbox {
+                button("Login")
             }
         }
     }
