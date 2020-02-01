@@ -9,6 +9,8 @@ import tornadofx.px
 class Styles : Stylesheet() {
     companion object {
         val heading by cssclass()
+        val wrapper by cssclass()
+        val row by cssclass()
     }
 
     init {
@@ -17,8 +19,14 @@ class Styles : Stylesheet() {
             fontSize = 20.px
             fontWeight = FontWeight.BOLD
         }
-        s(label){
-            minWidth=100.px
+        s(wrapper){
+            s(label){
+                minWidth=100.px
+            }
+            padding = box(15.px)
+            s(row){
+                padding = box(10.px, 5.px)
+            }
         }
     }
 }

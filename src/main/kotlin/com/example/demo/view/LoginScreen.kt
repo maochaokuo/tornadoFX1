@@ -1,5 +1,8 @@
 package com.example.demo.view
 
+
+import com.example.demo.app.Styles
+import com.example.demo.app.Styles.Companion.row
 import javafx.scene.layout.VBox
 import tornadofx.*
 
@@ -7,8 +10,10 @@ class LoginScreen : View() {
     override val root= VBox()
 
     init {
+        title ="Login"
+
         with (root) {
-            title ="Login"
+            addClass(Styles.wrapper)
             hbox {
                 label("Username")
                 textfield()
@@ -20,6 +25,7 @@ class LoginScreen : View() {
             hbox {
                 button("Login")
             }
+            children.addClass(row)
         }
     }
 }
