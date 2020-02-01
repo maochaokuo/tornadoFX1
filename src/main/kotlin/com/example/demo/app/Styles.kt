@@ -1,10 +1,7 @@
 package com.example.demo.app
 
 import javafx.scene.text.FontWeight
-import tornadofx.Stylesheet
-import tornadofx.box
-import tornadofx.cssclass
-import tornadofx.px
+import tornadofx.*
 
 class Styles : Stylesheet() {
     companion object {
@@ -19,14 +16,20 @@ class Styles : Stylesheet() {
             fontSize = 20.px
             fontWeight = FontWeight.BOLD
         }
+        val flat = mixin {
+            backgroundInsets = multi(box(0.px))
+        }
         s(wrapper){
             s(label){
                 minWidth=100.px
             }
             padding = box(15.px)
             s(row){
-                padding = box(10.px, 5.px)
+                padding = box(5.px)
             }
+        }
+        s(button, textInput){
+            +flat
         }
     }
 }
