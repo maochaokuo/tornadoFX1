@@ -12,3 +12,6 @@ Maven
     <version>1.7.17</version>
 </dependency>
 ```
+
+## this current example
+[Type safe JavaFX CSS with TornadoFX](https://www.youtube.com/watch?v=rjc8_HGHy3c)

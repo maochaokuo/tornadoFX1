@@ -2,6 +2,7 @@ package com.example.demo.app
 
 import javafx.scene.text.FontWeight
 import tornadofx.*
+import java.awt.Color
 
 class Styles : Stylesheet() {
     companion object {
@@ -18,12 +19,14 @@ class Styles : Stylesheet() {
         }
         val flat = mixin {
             backgroundInsets = multi(box(0.px))
+//            borderColor = box(Color.LIGHT_GRAY)
         }
         s(wrapper){
             s(label){
                 minWidth=100.px
             }
             padding = box(15.px)
+//            backgroundColor=Color.ORANGE
             s(row){
                 padding = box(5.px)
             }
