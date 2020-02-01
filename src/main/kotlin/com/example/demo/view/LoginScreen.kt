@@ -8,7 +8,7 @@ class LoginScreen : View() {
 
     init {
         with (root) {
-
+            title ="Login"
             hbox {
                 label("Username")
                 textfield()

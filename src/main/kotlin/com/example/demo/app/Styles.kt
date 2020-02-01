@@ -17,5 +17,8 @@ class Styles : Stylesheet() {
             fontSize = 20.px
             fontWeight = FontWeight.BOLD
         }
+        s(label){
+            minWidth=100.px
+        }
     }
 }
