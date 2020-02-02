@@ -3,6 +3,7 @@ package com.example.demo.view
 import javafx.beans.property.SimpleIntegerProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
+import javafx.scene.paint.Color
 import tornadofx.*
 import java.time.LocalDate
 import java.time.Period
@@ -29,10 +30,26 @@ class MyView : View() {
             Person(4, "Nicole Williams", LocalDate.of(1998,8,11))
     ).observable()
 
-    override val root = tableview(persons) {
-        column("ID", Person::idProperty)
-        column("Name", Person::nameProperty)
-        column("Birthday", Person::birthdayProperty)
-        readonlyColumn("Age", Person::age)
-    }
+    override val root =
+            tableview<Person> {
+                items = persons
+                column("ID", Person::idProperty)
+                column("Name", Person::nameProperty)
+                column("Birthday", Person::birthdayProperty)
+                readonlyColumn("Age", Person::age).cellFormat {
+                    text = it.toString()
+                    style {
+                        if (it < 22) {
+                            backgroundColor += c("#8b0000")
+                            textFill = Color.WHITE
+                        }
+                    }
+                }
+            }
+//    tableview(persons) {
+//        column("ID", Person::idProperty)
+//        column("Name", Person::nameProperty)
+//        column("Birthday", Person::birthdayProperty)
+//        readonlyColumn("Age", Person::age)
+//    }
 }
