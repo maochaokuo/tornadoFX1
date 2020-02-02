@@ -15,3 +15,9 @@ Maven
 
 ## this current example
 [Type safe JavaFX CSS with TornadoFX](https://www.youtube.com/watch?v=rjc8_HGHy3c)
+
+## TornadoFX Guide
+[TornadoFX Guide ](https://github.com/edvin/tornadofx-guide)
+
+### part 1
+[1. Why TornadoFX.md](https://github.com/edvin/tornadofx-guide/blob/master/part1/1.%20Why%20TornadoFX.md)
